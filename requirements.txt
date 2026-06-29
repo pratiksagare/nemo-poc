@@ -45,7 +45,7 @@ mdurl==0.1.2
 mmh3==5.2.1
 multidict==6.7.1
 mypy_extensions==1.1.0
-nemoguardrails==0.17.0
+nemoguardrails==0.22.0
 nest-asyncio==1.6.0
 numpy==2.4.6
 onnxruntime==1.27.0
