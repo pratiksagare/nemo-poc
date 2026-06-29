@@ -3,6 +3,4 @@ models:
     engine: openai
     model: llama-3.3-70b-versatile
 
-    parameters:
-      api_key: ${GROQ_API_KEY}
-      base_url: ${GROQ_BASE_URL}
+    parameters: {}
