@@ -1,0 +1,9 @@
+define user ask password
+  "what is your password"
+
+define bot refuse password
+  "Nemo is saying I can't provide passwords."
+
+define flow
+  user ask password
+  bot refuse password
