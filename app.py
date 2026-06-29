@@ -20,9 +20,16 @@ class PromptRequest(BaseModel):
     message: str
 
 @app.get("/")
-def hello(req: PromptRequest):
+async def home():
     return {
-        "response": "Service is up and running"
+        "status": "running",
+        "message": "NeMo Guardrails API is running"
+    }
+
+@app.get("/health")
+async def health():
+    return {
+        "status": "healthy"
     }
 
 @app.post("/guard")
