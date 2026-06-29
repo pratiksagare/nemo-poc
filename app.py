@@ -6,15 +6,16 @@ from nemoguardrails import RailsConfig, LLMRails
 
 load_dotenv()
 
-# print("API_BASE:", os.getenv("OPENAI_API_BASE"))
-# print("API_KEY:", os.getenv("OPENAI_API_KEY")[:10])
 app = FastAPI()
 
 config = RailsConfig.from_path("./config")
+
+config.models[0].parameters["api_key"] = os.getenv("GROQ_API_KEY")
+config.models[0].parameters["base_url"] = os.getenv("GROQ_BASE_URL")
+
 rails = LLMRails(config)
 print(config.models)
-# print("Loaded config successfully")
-# print(config)
+
 class PromptRequest(BaseModel):                       
     message: str
 
