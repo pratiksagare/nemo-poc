@@ -19,6 +19,12 @@ print(config.models)
 class PromptRequest(BaseModel):                       
     message: str
 
+@app.get("/")
+def hello(req: PromptRequest):
+    return {
+        "response": "Service is up and running"
+    }
+
 @app.post("/guard")
 async def guard(req: PromptRequest):
 
